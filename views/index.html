@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>FCC ISQA Project - Personal Library</title>
+    <meta name="description" content="A cool thing made with HyperDev">
+    <link id="favicon" rel="icon" href="https://i.postimg.cc/zX4SWQVx/2000px-Bright-anime-eyes-svg-1-25x15.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta+Stencil" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+    Welcome to the Manga Library
+      </h1>
+    </header>
+    <div id="sampleui">
+<form id="newBookForm" class="border">
+        <input type="text" id="bookTitleToAdd" name="title" placeholder="New 📔 Title">
+        <button type="submit" value="Submit" id="newBook">Add Manga!</button>
+      </form>
+      <div id="biblioteque"></div>
+      <div id="deleteAllSection">
+        <p id="dangerSection"><span id="danger1">Danger zone below!</span><br/><span id="danger2">Once deleted data can't be restored!</span></p>
+      <button id="deleteAllBooks"><span>Delete all 📔</span></button>
+      </div>
+    </div>
+        <footer>
+          Made by <a href="https://twitter.com/Victor01684891">Victor Cojocaru </a>
+          with ☕ and 🍩
+        </footer>        
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/public/client.js"></script>           
+    <script>
+      /*
+      *  For #sampleposting to update form action url to test inputs book id
+      */
+      $(function() {
+       $('#commentTest').submit(function(){
+         var id = $('#idinputtest').val();
+         $(this).attr('action', "/api/books/" + id);
+       });   
+      }); 
+   </script>
+  </body>
+</html>
